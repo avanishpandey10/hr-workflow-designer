@@ -568,59 +568,30 @@ Time to Interactive	~2.0s
 Node Drag Performance	60fps
 Max Supported Nodes	~100
 Bundle Size	~200KB (gzipped)
+
 🤝 Contributing
 Fork the repository
-
 Create your feature branch (git checkout -b feature/AmazingFeature)
-
 Commit your changes (git commit -m 'Add some AmazingFeature')
-
 Push to the branch (git push origin feature/AmazingFeature)
-
 Open a Pull Request
 
 Coding Standards
 Use TypeScript for all new files
-
 Follow existing naming conventions
-
 Write meaningful commit messages
-
 Test changes before submitting PR
 
 📄 License
-This project is submitted as part of the Tredence Analytics AI Engineering Internship assessment.
+This project is submitted as part of the Tredence Analytics Full stack Engineering Internship assessment.
 
 👨‍💻 Author
-Tredence Analytics - AI Engineering Internship Cohort 2025
-
+Avanish Pandey
 Project: HR Workflow Designer
-
 Type: Full Stack Engineering Intern Project
-
 Duration: 4-6 hours (time-boxed)
-
 Status: ✅ Complete
 
-🙏 Acknowledgments
-React Flow - Workflow library
-
-Tailwind CSS - CSS framework
-
-Zustand - State management
-
-Lucide Icons - Beautiful icons
-
-Vite - Build tool
-
-📞 Support
-For issues or questions:
-
-Check the Troubleshooting section
-
-Open an issue on GitHub
-
-Review the browser console for errors
 
 🎯 Summary
 The HR Workflow Designer is a complete, production-ready prototype that meets all requirements:
@@ -632,7 +603,7 @@ Mock API Integration	✅ 100%
 Test/Sandbox Panel	✅ 100%
 Architecture Expectations	✅ 100%
 Bonus Features	✅ 71% (5/7)
-Built with ❤️ for the Tredence Analytics AI Engineering Internship
+Built with ❤️ for the Tredence Analytics Full Stack Engineering Internship
 
 Version 3.0.0 | Last Updated: April 2026
 
@@ -647,21 +618,3 @@ npm run dev
 # Open browser
 http://localhost:5173
 That's it! Start designing your HR workflows! 🚀
-
-text
-
----
-
-This README is **complete, professional, and ready for submission**! It includes:
-
-✅ Architecture explanation  
-✅ How to run instructions  
-✅ Design decisions  
-✅ What was completed vs what would be added  
-✅ All bonus features documented  
-✅ Troubleshooting guide  
-✅ API reference  
-✅ Keyboard shortcuts  
-✅ Project structure  
-
-**Simply save this as `README.md` in your project root!** 📄
