@@ -96,6 +96,16 @@ The **HR Workflow Designer** is a visual tool that allows HR administrators to c
 
 ---
 
+## Output Screenshots
+Dashboard
+
+<img width="1920" height="1080" alt="Screenshot (1599)" src="https://github.com/user-attachments/assets/5ca15b8a-cceb-4191-b4b3-29e8a5873032" />
+
+Test
+
+<img width="1920" height="1080" alt="Screenshot (1598)" src="https://github.com/user-attachments/assets/3e8bcf99-f979-4522-986c-e06032c88210" />
+
+
 ## 📦 Installation
 
 ### Prerequisites
