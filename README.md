@@ -249,7 +249,7 @@ Configuration:
   title: string;      // Name of the start node
   type: 'start';      // Node type identifier
   metadata?: object;  // Optional custom metadata
-}
+} 
 
 2. Task Node 📋
 Purpose: Represents a human actionable task
