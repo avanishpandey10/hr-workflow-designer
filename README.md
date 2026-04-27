@@ -281,15 +281,11 @@ typescript
 Purpose: System-triggered automated actions
 
 Available Actions:
-
 send_email - Send email notification
-
 generate_doc - Generate PDF/document
-
 create_ticket - Create support ticket
 
 Configuration:
-
 typescript
 {
   title: string;         // Action name
@@ -301,9 +297,7 @@ typescript
 
 5. End Node 🏁
 Purpose: Marks workflow completion
-
 Configuration:
-
 typescript
 {
   title: string;         // End node title
@@ -314,7 +308,6 @@ typescript
 
 # 📝 Workflow Examples
 Example 1: Employee Onboarding
-text
 🚀 New Employee Joining
           ↓
 📋 Collect Documents
@@ -334,7 +327,6 @@ text
     💬 Message: Welcome aboard! Access granted.
     
 Example 2: Leave Approval
-text
 🚀 Leave Request Submitted
           ↓
 📋 Verify Leave Balance
@@ -351,7 +343,6 @@ text
 🏁 Leave Approved
 
 Example 3: Document Verification
-text
 🚀 Document Submission
          ↓
 📋 Initial Review
@@ -372,7 +363,6 @@ GET /automations
 Returns available automation actions.
 
 Response:
-
 json
 [
   {
