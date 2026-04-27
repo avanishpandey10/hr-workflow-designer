@@ -1,5 +1,3 @@
-📖 FINAL README.md - HR Workflow Designer
-markdown
 # 🏢 HR Workflow Designer
 
 A production-ready, drag-and-drop workflow designer for HR automation built with React, TypeScript, and React Flow. Design, configure, and test HR workflows like employee onboarding, leave approval, and document verification.
@@ -96,15 +94,15 @@ The **HR Workflow Designer** is a visual tool that allows HR administrators to c
 
 ---
 
-## Output Screenshots
-Dashboard
+## 🖼️ Output Screenshots
 
-<img width="1920" height="1080" alt="Screenshot (1598)" src="https://github.com/user-attachments/assets/3e8bcf99-f979-4522-986c-e06032c88210" />
+**Dashboard**
 
-Test
+<img width="1920" height="1080" alt="Dashboard Screenshot" src="https://github.com/user-attachments/assets/3e8bcf99-f979-4522-986c-e06032c88210" />
 
-<img width="1920" height="1080" alt="Screenshot (1599)" src="https://github.com/user-attachments/assets/5ca15b8a-cceb-4191-b4b3-29e8a5873032" />
+**Test Panel**
 
+<img width="1920" height="1080" alt="Test Panel Screenshot" src="https://github.com/user-attachments/assets/5ca15b8a-cceb-4191-b4b3-29e8a5873032" />
 
 ---
 
@@ -117,8 +115,9 @@ Test
 
 ### Step-by-Step Setup
 
+```bash
 # 1. Clone the repository
-git clone [https://github.com/your-username/hr-workflow-designer](https://github.com/avanishpandey10/hr-workflow-designer).git
+git clone https://github.com/avanishpandey10/hr-workflow-designer.git
 cd hr-workflow-designer
 
 # 2. Install dependencies
@@ -135,17 +134,23 @@ npx tailwindcss init -p
 
 # 6. Start the development server
 npm run dev
+```
 
-# Build for Production
+### Build for Production
 
-// Create production build
+```bash
+# Create production build
 npm run build
 
-// Preview production build
+# Preview production build
 npm run preview
+```
 
-# 📁 Project Structure
+---
 
+## 📁 Project Structure
+
+```
 hr-workflow-designer/
 ├── src/
 │   ├── components/
@@ -179,58 +184,66 @@ hr-workflow-designer/
 ├── tsconfig.json
 ├── vite.config.ts
 └── README.md
+```
 
-# 🎮 How to Use
-Quick Start Guide
+---
 
-1. Launch the Application
-   npm run dev
-   Open http://localhost:5173 in your browser
+## 🎮 How to Use
 
-2. Add Nodes to Canvas
-   - Locate the Node Library on the left sidebar
-   - Click and hold any node type
-   - Drag it to the white canvas area
-   - Release to place the node
+### Quick Start Guide
 
-3. Arrange Nodes
-   - Click and drag nodes to reposition them
-   - Arrange in vertical order: Start → Task → Approval → Automated → End
+**1. Launch the Application**
 
-4. Connect Nodes
-   
-   Method 1 - Auto-Connect:
-   - Click the 🔗 Auto-Connect button
-   - Nodes automatically connect based on vertical position
-   
-   Method 2 - Manual Connect:
-   - Click and hold the bottom dot of source node
-   - Drag to the top dot of target node
-   - Release to create connection
-   
-   Method 3 - Connect Selected:
-   - Ctrl+Click to select two nodes
-   - Click 🔗 Connect Selected button
+```bash
+npm run dev
+```
 
-5. Configure Nodes
-   - Click any node to open its configuration form
-   - Fill in the required fields
-   - Click Save Changes to update
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-6. Validate Workflow
-   - Click ✅ Validate button
-   - Checks for: Start node, End node, connections, logical order, required fields
+**2. Add Nodes to Canvas**
 
-7. Test Your Workflow
-   - Click 🧪 Test button
-   - View detailed step-by-step execution logs
-   - Check for errors or logical issues
+- Locate the Node Library on the left sidebar
+- Click and hold any node type
+- Drag it to the white canvas area
+- Release to place the node
 
-8. Delete Elements
-   - Click on a node or edge to select it
-   - Press the Delete key on your keyboard
+**3. Arrange Nodes**
 
-# Using Quick Templates
+- Click and drag nodes to reposition them
+- Arrange in vertical order: `Start → Task → Approval → Automated → End`
+
+**4. Connect Nodes**
+
+| Method | Steps |
+|--------|-------|
+| **Auto-Connect** | Click the 🔗 Auto-Connect button — nodes connect automatically by vertical position |
+| **Manual Connect** | Click and hold the bottom dot of a source node, drag to the top dot of a target node |
+| **Connect Selected** | Ctrl+Click to select two nodes, then click 🔗 Connect Selected |
+
+**5. Configure Nodes**
+
+- Click any node to open its configuration form
+- Fill in the required fields
+- Click **Save Changes** to update
+
+**6. Validate Workflow**
+
+- Click ✅ **Validate** button
+- Checks for: Start node, End node, connections, logical order, required fields
+
+**7. Test Your Workflow**
+
+- Click 🧪 **Test** button
+- View detailed step-by-step execution logs
+- Check for errors or logical issues
+
+**8. Delete Elements**
+
+- Click on a node or edge to select it
+- Press the `Delete` key on your keyboard
+
+### Using Quick Templates
+
 Click any template to instantly create a complete workflow:
 
 | Template | Workflow |
@@ -239,23 +252,27 @@ Click any template to instantly create a complete workflow:
 | 🏖️ Leave Approval | Start → Verify Balance → Manager Approval → Update Calendar → End |
 | 📄 Document Verification | Start → Initial Review → Quality Check → Generate Certificate → End |
 
-# 🎯 Node Types
+---
 
-1. Start Node 🚀
-Purpose: Defines the entry point of the workflow
+## 🎯 Node Types
 
-Configuration:
+### 1. Start Node 🚀
+
+**Purpose:** Defines the entry point of the workflow
+
+```typescript
 {
   title: string;      // Name of the start node
   type: 'start';      // Node type identifier
   metadata?: object;  // Optional custom metadata
-} 
+}
+```
 
-2. Task Node 📋
-Purpose: Represents a human actionable task
-Configuration:
+### 2. Task Node 📋
 
-typescript
+**Purpose:** Represents a human actionable task
+
+```typescript
 {
   title: string;        // Task name (required)
   description: string;  // Detailed instructions
@@ -264,29 +281,34 @@ typescript
   customFields?: Record<string, string>;  // Optional custom fields
   type: 'task';
 }
+```
 
-3. Approval Node ✅
-Purpose: Manager or HR approval step
-Configuration:
+### 3. Approval Node ✅
 
-typescript
+**Purpose:** Manager or HR approval step
+
+```typescript
 {
-  title: string;                    // Approval step name
-  approverRole: 'Manager' | 'HRBP' | 'Director';  // Approver role
-  autoApproveThreshold: number;     // Number of approvals needed (0-10)
+  title: string;                                       // Approval step name
+  approverRole: 'Manager' | 'HRBP' | 'Director';      // Approver role
+  autoApproveThreshold: number;                        // Number of approvals needed (0–10)
   type: 'approval';
 }
+```
 
-4. Automated Node ⚡
-Purpose: System-triggered automated actions
+### 4. Automated Node ⚡
 
-Available Actions:
-send_email - Send email notification
-generate_doc - Generate PDF/document
-create_ticket - Create support ticket
+**Purpose:** System-triggered automated actions
 
-Configuration:
-typescript
+**Available Actions:**
+
+| Action ID | Label | Description |
+|-----------|-------|-------------|
+| `send_email` | Send Email | Send email notification |
+| `generate_doc` | Generate Document | Generate PDF/document |
+| `create_ticket` | Create Ticket | Create support ticket |
+
+```typescript
 {
   title: string;         // Action name
   actionId: string;      // Selected action type
@@ -294,20 +316,28 @@ typescript
   parameters: object;    // Action-specific parameters
   type: 'automated';
 }
+```
 
-5. End Node 🏁
-Purpose: Marks workflow completion
-Configuration:
-typescript
+### 5. End Node 🏁
+
+**Purpose:** Marks workflow completion
+
+```typescript
 {
   title: string;         // End node title
   endMessage: string;    // Completion message
   showSummary: boolean;  // Show summary toggle
   type: 'end';
 }
+```
 
-# 📝 Workflow Examples
-Example 1: Employee Onboarding
+---
+
+## 📝 Workflow Examples
+
+### Example 1: Employee Onboarding
+
+```
 🚀 New Employee Joining
           ↓
 📋 Collect Documents
@@ -325,8 +355,11 @@ Example 1: Employee Onboarding
           ↓
 🏁 Onboarding Complete
     💬 Message: Welcome aboard! Access granted.
-    
-Example 2: Leave Approval
+```
+
+### Example 2: Leave Approval
+
+```
 🚀 Leave Request Submitted
           ↓
 📋 Verify Leave Balance
@@ -341,8 +374,11 @@ Example 2: Leave Approval
 ⚡ Update Calendar
           ↓
 🏁 Leave Approved
+```
 
-Example 3: Document Verification
+### Example 3: Document Verification
+
+```
 🚀 Document Submission
          ↓
 📋 Initial Review
@@ -354,16 +390,23 @@ Example 3: Document Verification
 ⚡ Generate Certificate
         ↓
 🏁 Verification Complete
+```
 
-# 🔌 API Reference
-# Mock API Endpoints
+---
+
+## 🔌 API Reference
+
+### Mock API Endpoints
+
 The application uses a mock API layer for demonstration purposes.
 
-GET /automations
+#### `GET /automations`
+
 Returns available automation actions.
 
-Response:
-json
+**Response:**
+
+```json
 [
   {
     "id": "send_email",
@@ -378,19 +421,24 @@ json
     "description": "Generate a PDF document"
   }
 ]
-POST /simulate
+```
+
+#### `POST /simulate`
+
 Simulates workflow execution.
 
-Request Body:
+**Request Body:**
 
-json
+```json
 {
   "nodes": [...],
   "edges": [...]
 }
-Response:
+```
 
-json
+**Response:**
+
+```json
 {
   "success": true,
   "steps": [
@@ -405,58 +453,75 @@ json
     }
   ]
 }
+```
 
-# ⌨️ Keyboard Shortcuts
+---
+
+## ⌨️ Keyboard Shortcuts
+
 | Action | Shortcut |
 |--------|----------|
-| Delete selected node/edge | Delete |
-| Undo last action | Ctrl + Z |
-| Redo last action | Ctrl + Y |
-| Save to history | Ctrl + S |
-| Zoom In | Ctrl + + |
-| Zoom Out | Ctrl + - |
-| Fit all nodes to view | Ctrl + F |
+| Delete selected node/edge | `Delete` |
+| Undo last action | `Ctrl + Z` |
+| Redo last action | `Ctrl + Y` |
+| Save to history | `Ctrl + S` |
+| Zoom In | `Ctrl + +` |
+| Zoom Out | `Ctrl + -` |
+| Fit all nodes to view | `Ctrl + F` |
 | Pan canvas | Click + drag background |
 
-# 🏗️ Architecture Decisions
-Why React Flow?
+---
+
+## 🏗️ Architecture Decisions
+
+### Why React Flow?
+
 - Provides robust workflow visualization out of the box
 - Built-in zoom/pan and edge management
 - Excellent TypeScript support
 - Saves significant development time
 
-Why Zustand over Redux?
+### Why Zustand over Redux?
+
 - Simpler API with less boilerplate
 - Perfect for this scale of application
 - Built-in persistence middleware
 - Better performance for frequent updates
 
-Why TypeScript?
+### Why TypeScript?
+
 - Compile-time type checking for complex node configurations
 - Prevents runtime errors with node data structures
 - Better IDE support and developer experience
 - Makes the codebase more maintainable
 
-Why Tailwind CSS?
+### Why Tailwind CSS?
+
 - Utility-first approach for rapid UI development
 - No CSS conflicts between components
 - Easy responsiveness
 - Smaller bundle size after purging
 
-Why Vite?
+### Why Vite?
+
 - Faster development server with HMR
 - Quicker build times compared to Webpack
 - Native TypeScript support
 - Modern ES module architecture
 
-State Management Design:
+### State Management Design
+
 - Zustand store manages all workflow state
 - History stack for undo/redo functionality
 - Persistence to localStorage for data retention
 - Actions are centralized and typed
 
-# 🔧 Troubleshooting
-Common Issues and Solutions
+---
+
+## 🔧 Troubleshooting
+
+### Common Issues and Solutions
+
 | Issue | Solution |
 |-------|----------|
 | Nodes not connecting | Click "Auto-Connect" or use "Connect Selected" button |
@@ -467,49 +532,58 @@ Common Issues and Solutions
 | Can't drag nodes | Make sure you're clicking on the node body, not the handles |
 | Form doesn't save | Check for validation errors (red borders) |
 
-# Validation Error Messages
+### Validation Error Messages
 
 | Message | Meaning | Fix |
 |---------|---------|-----|
-| START NODE MISSING | No Start node in workflow | Drag a Start node to canvas |
-| END NODE MISSING | No End node in workflow | Drag an End node to canvas |
-| NO CONNECTIONS | Nodes not connected | Click Auto-Connect |
-| Approval appears before Task | Logical order error | Reorder nodes (Task before Approval) |
-| Task has no assignee | Missing required field | Edit Task node, add assignee |
+| `START NODE MISSING` | No Start node in workflow | Drag a Start node to canvas |
+| `END NODE MISSING` | No End node in workflow | Drag an End node to canvas |
+| `NO CONNECTIONS` | Nodes not connected | Click Auto-Connect |
+| `Approval appears before Task` | Logical order error | Reorder nodes (Task before Approval) |
+| `Task has no assignee` | Missing required field | Edit Task node, add assignee |
 
-# Clearing Cache
+### Clearing Cache
 
-// Clear Vite cache
+```bash
+# Clear Vite cache
 rm -rf node_modules/.vite
 
-// Delete node_modules and reinstall
+# Delete node_modules and reinstall
 rm -rf node_modules package-lock.json
 npm install
 
-// Restart server
+# Restart server
 npm run dev
+```
 
-# 🚀 Future Improvements
-With additional time, the following features would be implemented:
+---
 
-# High Priority
-- Visual validation errors - Red borders on invalid nodes
-- Node version history - Track changes per node
-- Conditional branching - If/else logic in workflows
-- Parallel execution paths - Multiple branches simultaneously
+## 🚀 Future Improvements
 
-# Medium Priority
-- Real-time collaboration - Multi-user editing
-- Workflow analytics - Execution metrics and insights
-- Custom node plugins - Add custom node types at runtime
-- Dark mode - Theme support
+### High Priority
 
-# Low Priority
-- Mobile-responsive design - Touch-friendly interface
-- Accessibility improvements - ARIA labels, keyboard navigation
-- Performance optimizations - Virtual scrolling for large workflows
+- Visual validation errors — Red borders on invalid nodes
+- Node version history — Track changes per node
+- Conditional branching — If/else logic in workflows
+- Parallel execution paths — Multiple branches simultaneously
 
-# 📊 Deliverables Checklist
+### Medium Priority
+
+- Real-time collaboration — Multi-user editing
+- Workflow analytics — Execution metrics and insights
+- Custom node plugins — Add custom node types at runtime
+- Dark mode — Theme support
+
+### Low Priority
+
+- Mobile-responsive design — Touch-friendly interface
+- Accessibility improvements — ARIA labels, keyboard navigation
+- Performance optimizations — Virtual scrolling for large workflows
+
+---
+
+## 📊 Deliverables Checklist
+
 | Deliverable | Status |
 |-------------|--------|
 | React application (Vite) | ✅ |
@@ -524,7 +598,10 @@ With additional time, the following features would be implemented:
 | Mini-map & zoom controls | ✅ (Bonus) |
 | Auto-layout | ✅ (Bonus) |
 
-# 📈 Performance Metrics
+---
+
+## 📈 Performance Metrics
+
 | Metric | Value |
 |--------|-------|
 | Initial Load Time | ~1.5s |
@@ -533,31 +610,44 @@ With additional time, the following features would be implemented:
 | Max Supported Nodes | ~100 |
 | Bundle Size | ~200KB (gzipped) |
 
-# 🤝 Contributing
+---
+
+## 🤝 Contributing
+
 1. Fork the repository
-2. Create your feature branch (git checkout -b feature/AmazingFeature)
-3. Commit your changes (git commit -m 'Add some AmazingFeature')
-4. Push to the branch (git push origin feature/AmazingFeature)
+2. Create your feature branch: `git checkout -b feature/AmazingFeature`
+3. Commit your changes: `git commit -m 'Add some AmazingFeature'`
+4. Push to the branch: `git push origin feature/AmazingFeature`
 5. Open a Pull Request
 
-Coding Standards:
+### Coding Standards
+
 - Use TypeScript for all new files
 - Follow existing naming conventions
 - Write meaningful commit messages
 - Test changes before submitting PR
 
-📄 License
-This project is submitted as part of the Tredence Analytics Full stack Engineering Internship assessment.
+---
 
-# 👨‍💻 Author
-Avanish Pandey
-Project: HR Workflow Designer
-Type: Full Stack Engineering Intern Project
-Duration: 4-6 hours (time-boxed)
-Status: ✅ Complete
+## 📄 License
 
+This project is submitted as part of the Tredence Analytics Full Stack Engineering Internship assessment.
 
-# 🎯 Summary
+---
+
+## 👨‍💻 Author
+
+**Avanish Pandey**
+
+- Project: HR Workflow Designer
+- Type: Full Stack Engineering Intern Project
+- Duration: 4-6 hours (time-boxed)
+- Status: ✅ Complete
+
+---
+
+## 🎯 Summary
+
 The HR Workflow Designer is a complete, production-ready prototype that meets all requirements:
 
 | Requirement Area | Completion |
@@ -569,17 +659,25 @@ The HR Workflow Designer is a complete, production-ready prototype that meets al
 | Architecture Expectations | ✅ 100% |
 | Bonus Features | ✅ 71% (5/7) |
 
+---
+
 Built with ❤️ for the Tredence Analytics Full Stack Engineering Internship
 
-Version 3.0.0 | Last Updated: April 2026
+**Version 3.0.0** | Last Updated: April 2026
 
-# 🖥️ How to Run - Quick Reference
-// Install dependencies
+---
+
+## 🖥️ How to Run — Quick Reference
+
+```bash
+# Install dependencies
 npm install
 
-// Start development server
+# Start development server
 npm run dev
 
-// Open browser
-http://localhost:5173
+# Open browser
+# http://localhost:5173
+```
+
 That's it! Start designing your HR workflows! 🚀
